@@ -1,0 +1,26 @@
+{
+  "name": "socktest",
+  "version": "1.0.0",
+  "description": "simple test app based in socket.io",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruicorte/socktest.git"
+  },
+  "keywords": [
+    "socket.io",
+    "nodejs",
+    "canvas",
+    "javascript"
+  ],
+  "author": "rui corte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruicorte/socktest/issues"
+  },
+  "homepage": "https://github.com/ruicorte/socktest#readme"
+}
