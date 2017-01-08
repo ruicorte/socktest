@@ -8,3 +8,11 @@ var server = app.listen(3000, function(){
 })
 
 var io = require('socket.io')(server)
+
+io.on('connection', function(socket){
+	console.log(`socket connected ${socket.id}`)
+
+	socket.on('msgToServer', function(message){
+		console.log(`message received from client: ${message}`)
+	})
+})

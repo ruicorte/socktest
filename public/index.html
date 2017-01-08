@@ -7,9 +7,23 @@
 		src="https://code.jquery.com/jquery-3.1.1.min.js"
 		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 		crossorigin="anonymous"></script>
+		<script>
+			var socket = io()
+			$(document).ready(function(){
+				$("#message").keydown(function(event){
+					if(event.which===13){
+						socket.emit('msgToServer',this.value)
+						this.value = ''
+					}
+				})
+			})
+		</script>
 		<title>sockets test</title>
 	</head>
 	<body>
-
+		<label for="message">Enter message and press "return"</label>
+		<input type="text" id="message" />
+		<hr />
+		<div class="messages">messages</div>
 	</body>
 </html>
