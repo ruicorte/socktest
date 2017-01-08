@@ -9,7 +9,7 @@ var server = app.listen(process.env.PORT || 3000, function(){
 
 var io = require('socket.io')(server)
 
-io.on('connection', function(socket){
+io.sockets.on('connection', function(socket){
 	console.log(`socket connected ${socket.id}`)
 
 	socket.on('msgToServer', function(message){
