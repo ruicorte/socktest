@@ -14,6 +14,8 @@ io.on('connection', function(socket){
 
 	socket.on('msgToServer', function(message){
 		console.log(`message received from client: ${message}`)
-		io.emit('msgAppendToClient', function())
+		io.emit('msgAppendToClient', function(data){
+			console.log('qualquer coisa')
+		})
 	})
 })
